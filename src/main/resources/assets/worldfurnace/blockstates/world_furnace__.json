@@ -1,0 +1,43 @@
+{
+  "variants": {
+    "facing=east,lit=false,part=main": {
+      "model": "worldfurnace:block/world_furnace",
+      "y": 90
+    },
+    "facing=east,lit=true,part=main": {
+      "model": "worldfurnace:block/world_furnace_on",
+      "y": 90
+    },
+    "facing=north,lit=false,part=main": {
+      "model": "worldfurnace:block/world_furnace"
+    },
+    "facing=north,lit=true,part=main": {
+      "model": "worldfurnace:block/world_furnace_on"
+    },
+    "facing=south,lit=false,part=main": {
+      "model": "worldfurnace:block/world_furnace",
+      "y": 180
+    },
+    "facing=south,lit=true,part=main": {
+      "model": "worldfurnace:block/world_furnace_on",
+      "y": 180
+    },
+    "facing=west,lit=false,part=main": {
+      "model": "worldfurnace:block/world_furnace",
+      "y": 270
+    },
+    "facing=west,lit=true,part=main": {
+      "model": "worldfurnace:block/world_furnace_on",
+      "y": 270
+    },
+
+    "facing=north,lit=false,part=dummy": { "model": "worldfurnace:block/world_furnace_dummy" },
+    "facing=north,lit=true,part=dummy":  { "model": "worldfurnace:block/world_furnace_dummy" },
+    "facing=east,lit=false,part=dummy":  { "model": "worldfurnace:block/world_furnace_dummy" },
+    "facing=east,lit=true,part=dummy":   { "model": "worldfurnace:block/world_furnace_dummy" },
+    "facing=south,lit=false,part=dummy": { "model": "worldfurnace:block/world_furnace_dummy" },
+    "facing=south,lit=true,part=dummy":  { "model": "worldfurnace:block/world_furnace_dummy" },
+    "facing=west,lit=false,part=dummy":  { "model": "worldfurnace:block/world_furnace_dummy" },
+    "facing=west,lit=true,part=dummy":   { "model": "worldfurnace:block/world_furnace_dummy" }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "worldfurnace:block/world_furnace_dummy"
+    }
+  }
+}

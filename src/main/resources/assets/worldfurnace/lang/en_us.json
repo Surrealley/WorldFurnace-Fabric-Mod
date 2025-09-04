@@ -1,0 +1,10 @@
+{
+  "block.worldfurnace.world_furnace": "World furnace",
+  "block.worldfurnace.world_furnace_fancy": "World furnace decorative",
+  "itemgroup.worldfurnace": "World furnace tab",
+  "worldfurnace.warning": "Furnace does not have fuel!",
+  "worldfurnace.warning1": "Furnace need fuel!",
+  "worldfurnace.warning2": "You're gonna die without fuel!",
+  "worldfurnace.good": "Furnace is working, everyone feels warm!",
+  "worldfurnace.join": "You've came to this world! Make furnace full so you wont die from frozen!"
+}
