@@ -27,7 +27,6 @@ public class WorldFurnace implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModBlockEntities.registerBlockEntities();
 
-		HandledScreens.register(ModScreenHandler.WORLD_FURNACE_SCREEN_HANDLER, WorldFurnaceScreen::new);
 
 		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
 			ServerPlayerEntity player = handler.getPlayer();

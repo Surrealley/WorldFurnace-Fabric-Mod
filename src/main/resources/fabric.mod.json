@@ -18,6 +18,9 @@
 		"main": [
 			"com.endgy.WorldFurnace"
 		],
+		"client": [
+			"com.endgy.WorldFurnaceClient"
+		],
 		"fabric-datagen": [
 			"com.endgy.WorldFurnaceDataGenerator"
 		]
