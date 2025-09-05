@@ -242,10 +242,10 @@ public class WorldFurnaceBlockEntity extends BlockEntity implements ExtendedScre
         } else {
             decreaseProgress();
         }
+        List<PlayerEntity> players = (List<PlayerEntity>) world.getPlayers();
 
         markDirty(world, pos, state);
         if(progress == maxProgress){
-            List<PlayerEntity> players = (List<PlayerEntity>) world.getPlayers();
             for (PlayerEntity player : players) {
                 player.sendMessage(
                         Text.translatable("worldfurnace.good").formatted(Formatting.GREEN),
@@ -258,10 +258,9 @@ public class WorldFurnaceBlockEntity extends BlockEntity implements ExtendedScre
                 // Count ticks for warning messages
                 warningMessageTicks++;
                 if (warningMessageTicks >= Configs.myConfig.delayBetweenMessages) {
-                    List<PlayerEntity> players = (List<PlayerEntity>) world.getPlayers();
 
                     // Вставка сообщений
-                    String[] keys = {"worldfurnace.warning", "worldfurnace.warning1", "worldfurnace.warning2", "worldfurnace.warning3",};
+                    String[] keys = {"worldfurnace.warning", "worldfurnace.warning1", "worldfurnace.warning2", };
                     String randomKey = keys[world.random.nextInt(keys.length)];
 
                     for (PlayerEntity player : players) {
@@ -400,4 +399,5 @@ public class WorldFurnaceBlockEntity extends BlockEntity implements ExtendedScre
     public NbtCompound toInitialChunkDataNbt() {
         return createNbt();
     }
+
 }

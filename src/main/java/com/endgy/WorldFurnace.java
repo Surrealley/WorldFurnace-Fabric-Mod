@@ -8,7 +8,9 @@ import com.endgy.screen.ModScreenHandler;
 import com.endgy.screen.WorldFurnaceScreen;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,10 +29,13 @@ public class WorldFurnace implements ModInitializer {
 
 		HandledScreens.register(ModScreenHandler.WORLD_FURNACE_SCREEN_HANDLER, WorldFurnaceScreen::new);
 
-		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
-			assert client.player != null;
-			client.player.sendMessage(Text.translatable("worldfurnace.join"), false);
+		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
+			ServerPlayerEntity player = handler.getPlayer();
+
+			// Example: send a join message
+			player.sendMessage(Text.translatable("worldfurnace.join"), false);
 		});
 		LOGGER.info("Hello Fabric world!");
 	}
+
 }
