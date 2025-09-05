@@ -9,6 +9,5 @@ public class WorldFurnaceClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         HandledScreens.register(ModScreenHandler.WORLD_FURNACE_SCREEN_HANDLER, WorldFurnaceScreen::new);
-
     }
 }

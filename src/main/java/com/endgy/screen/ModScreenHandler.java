@@ -8,11 +8,14 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 
 public class ModScreenHandler {
-    public static final ScreenHandlerType<WorldFurnaceScreenHandler> WORLD_FURNACE_SCREEN_HANDLER =
-            Registry.register(Registries.SCREEN_HANDLER, new Identifier(WorldFurnace.MOD_ID, "world_furnace"),
-                    new ExtendedScreenHandlerType<>(WorldFurnaceScreenHandler::new));
+    public static ScreenHandlerType<WorldFurnaceScreenHandler> WORLD_FURNACE_SCREEN_HANDLER;
 
     public static void registerScreenHandlers() {
-        WorldFurnace.LOGGER.info("Registering Screen Handlers for " + WorldFurnace.MOD_ID);
+        WORLD_FURNACE_SCREEN_HANDLER =
+                Registry.register(Registries.SCREEN_HANDLER,
+                        new Identifier(WorldFurnace.MOD_ID, "world_furnace"),
+                        new ExtendedScreenHandlerType<>(WorldFurnaceScreenHandler::new));
+
+        WorldFurnace.LOGGER.info("Registered Screen Handlers for " + WorldFurnace.MOD_ID);
     }
 }
